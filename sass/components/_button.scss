@@ -1,0 +1,26 @@
+.button {
+  display: inline-block;
+  font-family: inherit;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.86;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  background-color: var(--accent-color);
+  color: #fff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  margin: 0 auto;
+  padding: 10px 32px 10px 32px;
+  border: hidden;
+
+  transition-property: background-color;
+  transition-duration: var(--general-duration);
+  transition-timing-function: var(--general-timing-function);
+
+  &:hover {
+    background-color: #188ce8;
+  }
+}
