@@ -2,6 +2,13 @@
   display: flex;
 }
 
+.work {
+  display: none;
+  @media screen and(min-width:1200px) {
+    display: flex;
+  }
+}
+
 .work-list__item {
   margin-right: 30px;
 }
