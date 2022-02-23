@@ -395,7 +395,8 @@ img {
   width: 100%;
   padding-left: 15px;
   padding-right: 15px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media screen and (min-width: 480px) {
@@ -430,20 +431,54 @@ img {
 }
 
 .advantages-list_item {
-  margin-right: 30px;
+  margin-bottom: 30px;
 }
 
-.advantages-list_item--turn-left {
-  margin-right: -30px;
+@media screen and (min-width: 768px) {
+  .advantages-list_item {
+    margin-right: 30px;
+    width: 354px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .advantages-list_item {
+    margin-bottom: -30px;
+    width: 270px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .advantages-list_item:nth-child(2n) {
+    margin-right: -30px;
+  }
+  .advantages-list_item:nth-last-child(-n + 2) {
+    margin-bottom: -30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .advantages-list_item:nth-child(2) {
+    margin-right: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .advantages-list_item--turn-left {
+    margin-right: -30px;
+  }
 }
 
 .advantages {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
-.advantages_list {
-  display: flex;
+@media screen and (min-width: 768px) {
+  .advantages_list {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .advantages-list_wrapper {
@@ -455,9 +490,20 @@ img {
   background-repeat: no-repeat;
   background-position: center;
   background-size: 70px 70px;
-  width: 270px;
   height: 120px;
   margin-bottom: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  .advantages-list_wrapper {
+    width: 354px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .advantages-list_wrapper {
+    width: 270px;
+  }
 }
 
 .advantages-list_text {
@@ -466,10 +512,11 @@ img {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--features-info-color);
-  max-width: 270px;
 }
 
 .advantages-list_title {
+  display: flex;
+  justify-content: center;
   font-weight: bold;
   font-size: 14px;
   line-height: 1.14;
@@ -477,6 +524,18 @@ img {
   text-transform: uppercase;
   color: var(--title-text-color);
   margin-bottom: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .advantages-list_title {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .advantages-list_title {
+    display: block;
+  }
 }
 
 .element-logo {

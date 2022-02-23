@@ -1,16 +1,49 @@
 .advantages-list_item {
-  margin-right: 30px;
+  margin-bottom: 30px;
+
+  @media screen and (min-width: 768px) {
+    margin-right: 30px;
+    width: 354px;
+  }
+
+  @media screen and(min-width: 1200px) {
+    margin-bottom: -30px;
+
+    width: 270px;
+  }
 }
+
+@media screen and (min-width: 768px) {
+  .advantages-list_item:nth-child(2n) {
+    margin-right: -30px;
+  }
+
+  .advantages-list_item:nth-last-child(-n + 2) {
+    margin-bottom: -30px;
+  }
+}
+
+@media screen and(min-width: 1200px) {
+  .advantages-list_item:nth-child(2) {
+    margin-right: 30px;
+  }
+}
+
 .advantages-list_item--turn-left {
-  margin-right: -30px;
+  @media screen and(min-width: 1200px) {
+    margin-right: -30px;
+  }
 }
 
 .advantages {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 
   &_list {
-    display: flex;
+    @media screen and (min-width: 768px) {
+      display: flex;
+      flex-wrap: wrap;
+    }
   }
 
   &-list_wrapper {
@@ -24,9 +57,16 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: 70px 70px;
-    width: 270px;
+
     height: 120px;
     margin-bottom: 30px;
+    @media screen and(min-width: 768px) {
+      width: 354px;
+    }
+
+    @media screen and(min-width: 1200px) {
+      width: 270px;
+    }
   }
 
   &-list_text {
@@ -35,10 +75,11 @@
     line-height: 1.71;
     letter-spacing: 0.03em;
     color: var(--features-info-color);
-    max-width: 270px;
   }
 
   &-list_title {
+    display: flex;
+    justify-content: center;
     font-weight: bold;
     font-size: 14px;
     line-height: 1.14;
@@ -47,5 +88,13 @@
 
     color: var(--title-text-color);
     margin-bottom: 10px;
+
+    @media screen and(min-width: 768px) {
+      display: block;
+    }
+
+    @media screen and(min-width: 1200px) {
+      display: block;
+    }
   }
 }
