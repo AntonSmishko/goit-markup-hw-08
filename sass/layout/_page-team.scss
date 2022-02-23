@@ -1,25 +1,50 @@
-.masters-list__item {
-  margin-right: 30px;
-}
-.masters-list__item--turn-left {
-  margin-right: -30px;
-}
-
-.masters-list {
-  display: flex;
-}
-
 .section-team {
   background-color: #f5f4fa;
-  padding-bottom: 94px;
-  padding-top: 94px;
+  padding-bottom: 60px;
+  padding-top: 60px;
+}
+.masters-list {
+  @media screen and(min-width:768px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 .masters-list__item {
   background-color: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+  @media screen and(min-width:768px) {
+    width: 354px;
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+
+    &:nth-child(2n) {
+      margin-right: -30px;
+    }
+
+    &:nth-last-child(-n + 2) {
+      margin-bottom: -30px;
+    }
+  }
+
+  @media screen and(min-width:1200px) {
+    width: 270px;
+    height: 428px;
+    &:nth-child(2) {
+      margin-right: 30px;
+    }
+    &:nth-child(n + 1) {
+      margin-bottom: -30px;
+    }
+  }
 }
+
 .masters-list__name {
   margin-bottom: 10px;
 
@@ -58,6 +83,7 @@
   height: 44px;
 
   display: flex;
+
   justify-content: center;
   align-items: center;
   border-radius: 50%;
