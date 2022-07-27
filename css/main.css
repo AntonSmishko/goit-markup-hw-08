@@ -305,13 +305,15 @@ img {
 .customers__list {
   display: flex;
   flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
 }
 
 .customers__link {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 170px;
+  min-width: 170px;
   height: 92px;
   border: 1px solid #afb1b8;
   box-sizing: border-box;
@@ -332,10 +334,9 @@ img {
 
 @media screen and (max-width: 767px) {
   .customers__item {
-    width: calc((100% - 60px) / 2);
+    flex-grow: 1;
   }
 }
-
 .portfolio-project__meta-title {
   font-weight: bold;
   font-size: 18px;
