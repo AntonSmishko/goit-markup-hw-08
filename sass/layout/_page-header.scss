@@ -35,7 +35,10 @@
 
 }
 
+
 }
+
+
 
 
 .header-nav__mobile{
@@ -90,7 +93,14 @@ letter-spacing: 0.02em;
 
 color: #212121;
 
+&:hover{
+  color: #2196F3;
 }
+&:focus{color: #2196F3;}
+
+}
+
+
 .header-nav__link-item + .header-nav__link-item{margin-top: 32px;}
 
 
@@ -169,7 +179,11 @@ margin-left: 10px;
 
 .header-nav {
   margin-left: 10px;
-  margin-right: 10xp;
+  margin-right: 10px;
+  @media (min-width:1200px) {margin-left: 93px;
+    
+  }
+
 }
 
 .header-nav-list__item:not(:last-child) {
@@ -260,6 +274,8 @@ margin-left: 10px;
 
 
 
+.header-nav__mobile-menu:hover > .icon-mobile{fill: #2196F3;}
+.header-nav__mobile-menu:focus > .icon-mobile{fill: #2196F3;}
 
 
   

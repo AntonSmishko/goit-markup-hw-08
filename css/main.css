@@ -130,6 +130,12 @@ img {
   letter-spacing: 0.02em;
   color: #212121;
 }
+.header-nav__info-link:hover {
+  color: #2196F3;
+}
+.header-nav__info-link:focus {
+  color: #2196F3;
+}
 
 .header-nav__link-item + .header-nav__link-item {
   margin-top: 32px;
@@ -204,7 +210,12 @@ img {
 
 .header-nav {
   margin-left: 10px;
-  margin-right: 10xp;
+  margin-right: 10px;
+}
+@media (min-width: 1200px) {
+  .header-nav {
+    margin-left: 93px;
+  }
 }
 
 .header-nav-list__item:not(:last-child) {
@@ -295,8 +306,16 @@ img {
   }
 }
 
+.header-nav__mobile-menu:hover > .icon-mobile {
+  fill: #2196F3;
+}
+
+.header-nav__mobile-menu:focus > .icon-mobile {
+  fill: #2196F3;
+}
+
 .hero {
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/header-img.jpg);
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/hero-mobile.jpg);
   background-color: #c4c4c4;
   max-width: 1600px;
   margin-right: auto;
@@ -307,7 +326,35 @@ img {
   padding-top: 200px;
   padding-bottom: 200px;
 }
+@media (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/hero-mobile@2x.jpg);
+    background-color: #c4c4c4;
+  }
+}
 
+@media (min-width: 500px) {
+  .hero {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/hero-tablet.jpg);
+  }
+}
+@media (min-width: 500px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/hero-tablet@2x.jpg);
+    background-color: #c4c4c4;
+  }
+}
+@media (min-width: 800px) {
+  .hero {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/header-img.jpg);
+  }
+}
+@media (min-width: 800px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/header@2x-img.jpg);
+    background-color: #c4c4c4;
+  }
+}
 .hero__title {
   margin: auto;
   margin-bottom: 30px;
@@ -912,11 +959,16 @@ img {
   }
 }
 
-@media (max-width: 1200px) {
+@media (min-width: 768px) and (max-width: 1200px) {
   .tablet-wrapper {
     display: flex;
     justify-content: space-around;
     margin-bottom: 60px;
+  }
+}
+@media (min-width: 1200px) {
+  .tablet-wrapper {
+    display: flex;
   }
 }
 
@@ -936,7 +988,8 @@ img {
 
 .modal {
   padding: 40px;
-  width: 528px;
+  width: 100%;
+  max-width: 528px;
   min-height: 581px;
   background-color: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
