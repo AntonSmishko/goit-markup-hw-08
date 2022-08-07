@@ -17,7 +17,7 @@
 
   padding: 40px;
   width: 100%;
-  max-width: 528px;
+  max-width: 450px;
   min-height: 581px;
   background-color: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -30,6 +30,12 @@
   transform: translate(-50%, -50%) scale(1) perspective(500px) rotateX(0deg);
   transform-origin: left bottom;
   transition: transform 1000ms;
+
+  @media (min-width:1200px) 
+  {max-width: 528px;
+    
+  }
+
 }
 
 .modal__close {
@@ -211,12 +217,16 @@
   display: flex;
   align-items: center;
   font-weight: normal;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.714;
 
   letter-spacing: 0.03em;
 
   color: var(--features-info-color);
+
+  @media (min-width:1200px){font-size: 14px;
+    
+  }
 }
 
 /* Кастомный чекбокс через before */
